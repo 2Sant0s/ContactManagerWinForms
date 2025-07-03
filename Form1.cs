@@ -21,6 +21,8 @@ namespace AgendaDeContatos
         {
             AlterarBotoesIncluirAlterarExcluir(true);
             AlterarBotoesSalvarECancelar(false);
+            CarregarListaContatos();
+
         }
         private void AlterarBotoesSalvarECancelar(bool estado)
         {
@@ -29,7 +31,7 @@ namespace AgendaDeContatos
         }
         private void AlterarBotoesIncluirAlterarExcluir(bool estado)
         {
-            btnAdicionar.Enabled = estado;
+            btnIncluir.Enabled = estado;
             btnAlterar.Enabled = estado;
             btnExcluir.Enabled = estado;
 
@@ -51,6 +53,46 @@ namespace AgendaDeContatos
         {
             AlterarBotoesIncluirAlterarExcluir(true);
             AlterarBotoesSalvarECancelar(false);
+        }
+
+        private void frmAgendaContatos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Contato contato = new Contato()
+            {
+                Nome = txbNome.Text,
+                Email = txbEmail.Text,
+                NumeroTelefone = txbTelefone.Text
+            };
+
+            List<Contato> contatosList = new List<Contato>();
+
+            foreach (Contato ContatoDaLista in lbxContatos.Items)
+            {
+                contatosList.Add(ContatoDaLista);
+            }
+
+            contatosList.Add(contato);
+            ManipuladorArquivo.EscreverArquivo(contatosList);
+            CarregarListaContatos();
+            AlterarBotoesSalvarECancelar(false);
+            AlterarBotoesIncluirAlterarExcluir(true);
+            LimparCampos();
+        }
+        private void CarregarListaContatos()
+        {
+            lbxContatos.Items.Clear();
+            lbxContatos.Items.AddRange(ManipuladorArquivo.LerArquivo().ToArray());
+        }
+        private void LimparCampos()
+        {
+            txbNome.Text = "";
+            txbTelefone.Text = "";
+            txbEmail.Text = "";
         }
     }
 }

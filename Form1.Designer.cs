@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbNumeroContato = new System.Windows.Forms.ListBox();
+            this.lbxContatos = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbTelefone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbNumeroContato
+            // lbxContatos
             // 
-            this.lbNumeroContato.FormattingEnabled = true;
-            this.lbNumeroContato.Location = new System.Drawing.Point(12, 12);
-            this.lbNumeroContato.Name = "lbNumeroContato";
-            this.lbNumeroContato.Size = new System.Drawing.Size(224, 290);
-            this.lbNumeroContato.TabIndex = 0;
+            this.lbxContatos.FormattingEnabled = true;
+            this.lbxContatos.Location = new System.Drawing.Point(12, 12);
+            this.lbxContatos.Name = "lbxContatos";
+            this.lbxContatos.Size = new System.Drawing.Size(224, 290);
+            this.lbxContatos.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,19 +59,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
             // 
-            // textBox1
+            // txbNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 2;
+            this.txbNome.Location = new System.Drawing.Point(300, 25);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(182, 20);
+            this.txbNome.TabIndex = 2;
             // 
-            // textBox2
+            // txbEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 20);
-            this.textBox2.TabIndex = 4;
+            this.txbEmail.Location = new System.Drawing.Point(300, 51);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(182, 20);
+            this.txbEmail.TabIndex = 4;
             // 
             // label2
             // 
@@ -82,12 +82,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Email:";
             // 
-            // textBox3
+            // txbTelefone
             // 
-            this.textBox3.Location = new System.Drawing.Point(300, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 20);
-            this.textBox3.TabIndex = 6;
+            this.txbTelefone.Location = new System.Drawing.Point(300, 77);
+            this.txbTelefone.Name = "txbTelefone";
+            this.txbTelefone.Size = new System.Drawing.Size(182, 20);
+            this.txbTelefone.TabIndex = 6;
             // 
             // label3
             // 
@@ -98,15 +98,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Telefone:";
             // 
-            // btnAdicionar
+            // btnIncluir
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(245, 119);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.btnAdicionar.TabIndex = 7;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            this.btnIncluir.Location = new System.Drawing.Point(245, 119);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.TabIndex = 7;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnAlterar
             // 
@@ -145,6 +145,7 @@
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmAgendaContatos
             // 
@@ -155,16 +156,17 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnAdicionar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btnIncluir);
+            this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbNome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbNumeroContato);
+            this.Controls.Add(this.lbxContatos);
             this.Name = "frmAgendaContatos";
             this.Text = "Agenda de Contatos ";
+            this.Load += new System.EventHandler(this.frmAgendaContatos_Load);
             this.Shown += new System.EventHandler(this.frmAgendaContatos_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,14 +175,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbNumeroContato;
+        private System.Windows.Forms.ListBox lbxContatos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;

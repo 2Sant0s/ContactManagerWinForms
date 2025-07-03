@@ -12,11 +12,15 @@ namespace AgendaDeContatos
         public string Email { get; set; }
         public string NumeroTelefone { get; set; }
 
-        public Contato(string nome, string email, string numeroTelefone)
+        public Contato(string nome = "", string email = "", string numeroTelefone = "")
         {
             this.Nome = nome;
             this.Email = email;
             this.NumeroTelefone = numeroTelefone;
+        }
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}, {2}", this.Nome, this.Email, this.NumeroTelefone);
         }
     }
 }
