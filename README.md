@@ -5,7 +5,7 @@
  <a href="#tech" title="technologies">Technologies</a> • 
  <a href="#about" title="about">About</a> • 
  <a href="#clone" title="clone">Clone</a> •
- <a href="">Project</a>
+ <a href="https://github.com/2Sant0s/ContactManagerWinForms/blob/master/Form1.cs">Project</a>
 </p>
 
 <h2 id="layout">🎨 Layout</h2>
